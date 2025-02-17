@@ -24,4 +24,5 @@ A dynamic and fully customizable **Website** built with **HTML, CSS, and JavaScr
 
 ## 📸 Preview  
 
+![Website Screenshot](/imgs/preview.png)  
 ![Website Screenshot](/imgs/preview.gif)  
