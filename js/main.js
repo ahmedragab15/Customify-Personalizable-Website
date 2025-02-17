@@ -30,6 +30,7 @@ randomBackground();
 document.querySelector(".toggle-settings i").addEventListener("click", (e) => {
     document.querySelector(".settings-box").classList.toggle("open");
     e.target.classList.toggle("fa-spin");
+    e.target.parentElement.classList.toggle("open");
 });
 
 //? change main color
@@ -117,7 +118,7 @@ window.onscroll = function () {
 
     let allSkills = document.querySelectorAll(".skill-box .skill-progress span")
 
-    if (windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight) - 300) {
+    if (windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight) - 500) {
         allSkills.forEach((skill) => {
             skill.style.width = skill.dataset.progress;
         })

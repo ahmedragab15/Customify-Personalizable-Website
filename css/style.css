@@ -136,6 +136,8 @@ ul {
     transition: 0.5s;
     padding-top: 50px;
     color: #fff;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .settings-box.open {
@@ -143,9 +145,11 @@ ul {
 }
 
 .toggle-settings {
-    position: absolute;
-    right: -60px;
+    position: fixed;
+    left: 20px;
     top: 130px;
+    z-index: 1000;
+    transition: 0.5s;
 }
 
 .toggle-settings i {
@@ -153,6 +157,10 @@ ul {
     padding: 8px;
     cursor: pointer;
     color: var(--main-color);
+}
+
+.toggle-settings.open {
+    left: 270px;
 }
 
 .settings-container {
@@ -251,7 +259,8 @@ ul {
     background: #f32011;
     border: none;
 }
-.resetBtn:hover{
+
+.resetBtn:hover {
     background: #9e0c01;
 }
 
@@ -646,9 +655,11 @@ header ul li a:hover {
     0% {
         transform: rotate(0);
     }
+
     50% {
         transform: rotate(1.5deg);
     }
+
     100% {
         transform: rotate(-1.5deg);
     }
@@ -1039,6 +1050,7 @@ footer {
 /* end footer */
 /* start responsive */
 @media (min-width: 2000px) {
+
     /* large screens*/
     .container {
         max-width: 1800px;
@@ -1046,6 +1058,7 @@ footer {
 }
 
 @media (max-width: 2000) {
+
     /* pc medium screens*/
     .container {
         max-width: 1400px;
@@ -1053,6 +1066,7 @@ footer {
 }
 
 @media (max-width: 1200px) {
+
     /* laptops*/
     .container {
         max-width: 960px;
@@ -1060,6 +1074,7 @@ footer {
 }
 
 @media (max-width: 992px) {
+
     /* tablets*/
     .container {
         max-width: 720px;
@@ -1129,6 +1144,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+
     /*big phones*/
     .container {
         max-width: 540px;
@@ -1185,6 +1201,7 @@ footer {
 }
 
 @media (max-width: 576px) {
+
     /* phones*/
     .container {
         max-width: 530px;
@@ -1292,4 +1309,5 @@ footer {
         padding: 5px 0;
     }
 }
+
 /* end responsive */
